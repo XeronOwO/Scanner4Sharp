@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>
+      netcoreapp2.0;
+      netcoreapp2.1;
+      netcoreapp2.2;
+      netcoreapp3.0;
+      netcoreapp3.1;
+      net5.0;
+      net6.0;
+      net7.0;
+      netstandard2.0;
+      netstandard2.1;
+      net471;
+      net472;
+      net48;
+    </TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Scanner4Sharp</Title>
+    <Description>A simple scanner class for CSharp.</Description>
+    <Copyright>MIT License</Copyright>
+    <PackageProjectUrl>https://github.com/q2398003522/Scanner4Sharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/q2398003522/Scanner4Sharp</RepositoryUrl>
+    <PackAsTool>False</PackAsTool>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
