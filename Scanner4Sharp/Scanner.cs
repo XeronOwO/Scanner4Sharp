@@ -60,36 +60,39 @@ namespace Scanner4Sharp
 		/// Whether the next value exists.
 		/// </summary>
 		/// <returns><b>true</b> if exists, <b>false</b> otherwise.</returns>
-		public bool HasNext()
+		public bool HasNext
 		{
-			if (_buffers.Count == 0)
+			get
 			{
-				return false;
-			}
-
-			// Check _buffers[0]
-			for (int i = _position; i < _buffers[0].Length; i++)
-			{
-				if (!_skipChars.Contains(_buffers[0][i]))
+				if (_buffers.Count == 0)
 				{
-					return true;
+					return false;
 				}
-			}
 
-			// Check _buffers[1..]
-			for (int i = 1; i < _buffers.Count; i++)
-			{
-				var buffer = _buffers[i];
-				for (int j = 0; j < buffer.Length; j++)
+				// Check _buffers[0]
+				for (int i = _position; i < _buffers[0].Length; i++)
 				{
 					if (!_skipChars.Contains(_buffers[0][i]))
 					{
 						return true;
 					}
 				}
-			}
 
-			return false;
+				// Check _buffers[1..]
+				for (int i = 1; i < _buffers.Count; i++)
+				{
+					var buffer = _buffers[i];
+					for (int j = 0; j < buffer.Length; j++)
+					{
+						if (!_skipChars.Contains(_buffers[0][i]))
+						{
+							return true;
+						}
+					}
+				}
+
+				return false;
+			}
 		}
 
 		/// <summary>

@@ -32,11 +32,11 @@ namespace Test
 			Console.WriteLine(scanner.NextLong());
 
 			// check if the next value exists
-			Console.WriteLine(scanner.HasNext());
+			Console.WriteLine(scanner.HasNext);
 			// clear buffer: " TTT"
 			scanner.ClearBuffer();
 			// check if the next value exists
-			Console.WriteLine(scanner.HasNext());
+			Console.WriteLine(scanner.HasNext);
 		}
 	}
 }
